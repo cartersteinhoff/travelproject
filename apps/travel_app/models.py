@@ -1,6 +1,6 @@
 from django.db import models
 import bcrypt,datetime
-
+#carter
 class UserManager(models.Manager):
     def validate_registration(self, postData):
         response = {
