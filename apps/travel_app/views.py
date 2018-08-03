@@ -30,8 +30,20 @@ def processlog(request):
 def success(request):
     if 'user_id' not in request.session:
         return redirect('/')
+
+    context = {
+        "me": User.objects.get(id=request.session['user_id']),
+        "users": User.objects.all(),
+        # "all_trips": Trip.objects.all(),
+        # # "not_my_trips": Trip.objects.exclude(user_on_trip=request.session['user_id']),
+        # # "my_trips": Trip.objects.filter(user_on_trip=request.session['user_id'])
+        # "my_trips": User.objects.get(id=request.session['user_id']).created_trips.all(),
+        # "joined_trips": User.objects.get(id=request.session['user_id']).trips.all(),
+        # "others_trip":Trip.objects.exclude(created_by= User.objects.filter(id=request.session['user_id'])).exclude(user_on_trip=User.objects.get(id=request.session['user_id'])) 
+
+    }
     
-    return render(request, 'travel_app/success.html')
+    return render(request, 'travel_app/success.html', context)
 
 def logout(request):
     request.session.clear() 
