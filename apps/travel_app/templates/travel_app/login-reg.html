@@ -3,22 +3,17 @@
     <head>
       <meta charset="utf-8">
       <title>login</title>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'travel_app/css/style.css' %}">
       <style>
-           body{
-            background: linear-gradient(to right, #d0dd8d ,#fbf2ea, #e9cdd9,#f9fbd7);
-          }
-          .reg{
-              display: inline-block;
-              margin-right: 200px;
-          }
-
-          .login{
-              display: inline-block;
-              vertical-align: top;
-              
-          }
-      </style>
+            body {
+                background-image: url('{% static "travel_app/images/background.jpeg" %}');
+                background-repeat: no-repeat;
+    background-size: cover;
+            }
+        </style>
     </head>
+
     <body>
         <div class="reg">
                 {% if messages %}

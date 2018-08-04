@@ -31,7 +31,11 @@ def success(request):
     if 'user_id' not in request.session:
         return redirect('/')
     
-    return render(request, 'travel_app/success.html')
+    context = {
+            "me": User.objects.get(id=request.session['user_id'])
+    }
+    
+    return render(request, 'travel_app/success.html', context)
 
 def logout(request):
     request.session.clear() 
