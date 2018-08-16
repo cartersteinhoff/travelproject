@@ -43,13 +43,10 @@ def success(request):
 
     }
     
-<<<<<<< HEAD
     context = {
             "me": User.objects.get(id=request.session['user_id'])
     }
     
-=======
->>>>>>> e507261d0f8edee05a2cc6b1a61d53212e703a0f
     return render(request, 'travel_app/success.html', context)
 
 def logout(request):
