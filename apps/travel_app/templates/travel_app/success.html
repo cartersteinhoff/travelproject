@@ -1,7 +1,7 @@
 {% extends "travel_app/base.html" %}
 <!-- Content here -->
 {% block content %}
-<body>
+<body class='success-wrapper'>
     <a href="/logout">logout</a>
         <h1>Hello {{ me.first_name}} !</h1>
         <h3>Your trip schedules</h3>
@@ -34,18 +34,20 @@
                 </tbody>
             </table>
         <h3>Other users travel plans</h3>
-            <table class="others_trip">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Destination</th>
-                            <th>Travel Start Date</th>
-                            <th>Travel End Date</th>
-                            <th>Do you want to join?</th>  
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for trip in others_trip %}
+        <a href="/add_travel_plan">Add Travel Plan</a>
+
+       <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Want to join?</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for trip in others_trip %}
                         <tr>
                             <td>{{ trip.created_by.first_name }} {{ trip.created_by.last_name }}</td>
                             <td><a href="/details/{{trip.id}}">{{trip.destination}}</a></td>
@@ -53,10 +55,21 @@
                             <td>{{trip.travel_date_to}}</td>
                             <td><a href="/join/{{trip.id}}">join</a></td>  
                         </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>        
-        <a href="/add_travel_plan">Add Travel Plan</a>
+    {% endfor %}
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
 
     </body>
 
