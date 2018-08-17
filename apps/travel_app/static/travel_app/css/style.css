@@ -1,4 +1,5 @@
-body {
-    background: url("/static/travel_app/images/background.jpeg")
+.login-wrapper {
+  background: url("/static/travel_app/images/background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
