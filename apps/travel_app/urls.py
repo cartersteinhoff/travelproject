@@ -1,5 +1,7 @@
 from django.conf.urls import url
-from . import views          
+from . import views  
+
+      
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^registration$', views.registration),
@@ -11,5 +13,6 @@ urlpatterns = [
     url(r'^add$',views.add),
     url(r'^add_travel_plan$', views.add_travel_plan),
     url(r'^details/(?P<trip_id>\d+)$', views.details),
-    url(r'^join/(?P<trip_id>\d+)$', views.join)
+    url(r'^join/(?P<trip_id>\d+)$', views.join),
+
 ]

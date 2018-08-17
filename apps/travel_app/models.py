@@ -98,8 +98,8 @@ class TripManager(models.Manager):
                 travel_date_to = post_travel_date_to,
                 created_by = post_created_by 
                 )
-            trip.user_on_trip.add(post_created_by)
-            trip.save()
+            # trip.user_on_trip.add(post_created_by)
+            # trip.save()
         
            
         return response 
