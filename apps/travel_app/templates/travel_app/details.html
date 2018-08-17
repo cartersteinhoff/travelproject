@@ -1,0 +1,24 @@
+{% extends "travel_app/base.html" %}
+<!-- Content here -->
+{% block content %}
+
+<body>
+    <a href="/home">Home</a>
+    <a href="/logout">logout</a>
+        <h2>{{current_trip.destination}}</h2>
+        <p>Planned By:{{current_trip.created_by.first_name}} </p>
+        <p>Description:  {{current_trip.description}}</p>
+        <p>Travel Date From:  {{current_trip.travel_date_from}}</p>
+        <p>Travel Date To:  {{current_trip.travel_date_to}}</p>
+        <h3>Other users joining this trip</h3>
+        <ul>
+            {% for user in other_users %}
+            
+            <li>{{user.first_name}}</li>
+
+            {% endfor %}
+        </ul> 
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=hawai%20of%20san%20francisco&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.pureblack.de">pureblack.de</a></div><style>.mapouter{text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>
+        {% endblock %}
+
+</body>

@@ -1,4 +1,34 @@
-body {
-    background: url("/static/travel_app/images/background.jpeg")
-}
+.login-wrapper {
+    background: url("/static/travel_app/images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .login-content{
+      width: 400px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.5); /* Color white with alpha 0.9*/
 
+
+  }
+  .login-form{
+      width: 300px;
+      margin: auto;
+  }
+  .reg-wrapper {
+    background: url("/static/travel_app/images/background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+  .reg-content{
+      width: 400px;
+      height: 500px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.5); /* Color white with alpha 0.9*/
+
+  }
+  .reg-form{
+      width: 300px;
+      margin: auto;
+  }
