@@ -85,6 +85,9 @@ def details(request, trip_id):
 
 def join(request, trip_id):
     Trip.objects.join(trip_id,request.session['user_id'])
+    return redirect('/success')
 
+def unjoin(request, trip_id):
+    Trip.objects.unjoin(trip_id,request.session['user_id'])
     return redirect('/success')
 

@@ -99,14 +99,19 @@ class TripManager(models.Manager):
                 created_by = post_created_by 
                 )
             trip.user_on_trip.add(post_created_by)
-            trip.save()
-        
-           
+            trip.save()  
         return response 
+
     def join(self, trip_id, user_id):
         me = User.objects.get(id=user_id)
         trip = Trip.objects.get(id=trip_id)
         trip.user_on_trip.add(me)
+        trip.save()
+
+    def unjoin(self, trip_id, user_id):
+        me = User.objects.get(id=user_id)
+        trip = Trip.objects.get(id=trip_id)
+        trip.user_on_trip.remove(me)
         trip.save()
 
 

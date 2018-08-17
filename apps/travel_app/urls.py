@@ -11,5 +11,6 @@ urlpatterns = [
     url(r'^add$',views.add),
     url(r'^add_travel_plan$', views.add_travel_plan),
     url(r'^details/(?P<trip_id>\d+)$', views.details),
-    url(r'^join/(?P<trip_id>\d+)$', views.join)
+    url(r'^join/(?P<trip_id>\d+)$', views.join),
+    url(r'^unjoin/(?P<trip_id>\d+)$', views.unjoin)
 ]
