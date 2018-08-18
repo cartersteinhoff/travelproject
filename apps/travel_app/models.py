@@ -98,15 +98,7 @@ class TripManager(models.Manager):
                 travel_date_to = post_travel_date_to,
                 created_by = post_created_by 
                 )
-<<<<<<< HEAD
-            trip.user_on_trip.add(post_created_by)
-            trip.save()  
-=======
-            # trip.user_on_trip.add(post_created_by)
-            # trip.save()
         
-           
->>>>>>> 3c8dbf83b46b7d634fa9d1eb285da949fdaf6f2a
         return response 
 
     def join(self, trip_id, user_id):

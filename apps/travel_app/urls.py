@@ -14,9 +14,5 @@ urlpatterns = [
     url(r'^add_travel_plan$', views.add_travel_plan),
     url(r'^details/(?P<trip_id>\d+)$', views.details),
     url(r'^join/(?P<trip_id>\d+)$', views.join),
-<<<<<<< HEAD
     url(r'^unjoin/(?P<trip_id>\d+)$', views.unjoin)
-=======
-
->>>>>>> 3c8dbf83b46b7d634fa9d1eb285da949fdaf6f2a
 ]
